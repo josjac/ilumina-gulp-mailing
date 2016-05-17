@@ -12,11 +12,11 @@ var cwd = process.cwd();
 
 var default_config = {
   src: [
-    '!' + path.join(cwd, 'src', 'templates', 'mailings', '_*.jade'),
-    path.join(cwd, 'src', 'templates', 'mailings', '*.jade')
+    '!' + path.join(cwd, 'src', 'templates', '_*.jade'),
+    path.join(cwd, 'src', 'templates', '*.jade')
   ],
   url: path.join(cwd, 'dist', 'static'),
-  dest: path.join(cwd, 'dist', 'mailings')
+  dest: path.join(cwd, 'dist')
 }
 
 var self = {
@@ -42,3 +42,5 @@ gulp.task('mailing', function() {
   self.run()
   .pipe(gulp.dest(self.config.dest))
 });
+
+module.exports = self;
