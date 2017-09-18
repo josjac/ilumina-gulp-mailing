@@ -12,8 +12,8 @@ var cwd = process.cwd();
 
 var default_config = {
   src: [
-    '!' + path.join(cwd, 'src', 'templates', '_*.jade'),
-    path.join(cwd, 'src', 'templates', '*.jade')
+    '!' + path.join(cwd, 'src', 'templates', '_*.pug'),
+    path.join(cwd, 'src', 'templates', '*.pug')
   ],
   url: path.join(cwd, 'dist', 'static'),
   dest: path.join(cwd, 'dist')
